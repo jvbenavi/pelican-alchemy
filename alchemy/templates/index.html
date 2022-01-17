@@ -44,6 +44,11 @@
         </h4>
         <div class="content">
           {{ article.summary|striptags }}
+          {% if article.cover %}           
+             <div class="container"><div class="col-md-6" style="padding-left: 0px;  padding-right: 0px;">
+               <img src="{{ STIEURL }}/{{ article.url }}/{{ article.cover }}" class="img-fluid">
+               </div></div>   
+          {% endif %} 
         </div>
       </div>
     </article>
